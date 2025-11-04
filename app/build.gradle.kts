@@ -56,14 +56,7 @@ android {
         }
     }
 
-    applicationVariants.all {
-        outputs.forEach { output ->
-            check(output is com.android.build.gradle.internal.api.ApkVariantOutputImpl)
-            // flavorName is null, so use buildType.name instead
-            output.outputFileName =
-                "TCamera_${versionName}_${buildType.name}.apk"
-        }
-    }
+   
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
